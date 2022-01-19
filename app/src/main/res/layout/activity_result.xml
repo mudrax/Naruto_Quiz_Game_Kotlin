@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/resactivity"
+    tools:context=".resultActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Congratulations!!"
+        android:textColor="#FDD835"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cv_resultcard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
+
+    <androidx.cardview.widget.CardView
+        android:paddingTop="10dp"
+        android:id="@+id/cv_resultcard"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/selectedoption_bg"
+        android:padding="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.527" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="💛Thanks For Playing💛" />
+
+            <ImageView
+                android:layout_width="400px"
+                android:layout_height="330px"
+                android:src="@drawable/ic_trophy"/>
+            <TextView
+                android:id="@+id/tv_resultscreen_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:text="Well Done! Name "/>
+            <TextView
+                android:id="@+id/tv_resultscreen_marks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:text="Your score is x out of 15"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/cv_resultcard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="finish"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FFD000"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#3B3C3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_resultcard"
+        android:onClick="resetIntent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
